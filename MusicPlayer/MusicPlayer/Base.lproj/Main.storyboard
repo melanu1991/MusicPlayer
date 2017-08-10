@@ -22,11 +22,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qEz-mC-YXL">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image" translatesAutoresizingMaskIntoConstraints="NO" id="qEz-mC-YXL">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="333.5"/>
                             </imageView>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="M9J-WY-4rG">
                                 <rect key="frame" x="93" y="433.5" width="189" height="31"/>
+                                <gestureRecognizers/>
                                 <connections>
                                     <action selector="rewindSound:" destination="BYZ-38-t0r" eventType="valueChanged" id="UDA-cx-w3F"/>
                                 </connections>
@@ -115,6 +116,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="image" width="93" height="88"/>
         <image name="next" width="50" height="50"/>
         <image name="play" width="50" height="48"/>
         <image name="prev" width="50" height="50"/>
