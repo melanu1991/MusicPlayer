@@ -27,6 +27,9 @@
                             </imageView>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="M9J-WY-4rG">
                                 <rect key="frame" x="93" y="433.5" width="189" height="31"/>
+                                <connections>
+                                    <action selector="rewindSound:" destination="BYZ-38-t0r" eventType="valueChanged" id="UDA-cx-w3F"/>
+                                </connections>
                             </slider>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="urQ-Sp-iIN">
                                 <rect key="frame" x="30" y="433.5" width="45" height="21"/>
@@ -47,6 +50,9 @@
                                     <constraint firstAttribute="height" constant="50" id="YKa-i6-4IQ"/>
                                 </constraints>
                                 <state key="normal" image="prev"/>
+                                <connections>
+                                    <action selector="prevButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eKc-Cn-mfS"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fen-J2-jKZ">
                                 <rect key="frame" x="295" y="554.5" width="50" height="50"/>
@@ -55,14 +61,20 @@
                                     <constraint firstAttribute="height" constant="50" id="ZiC-iB-sl6"/>
                                 </constraints>
                                 <state key="normal" image="next"/>
+                                <connections>
+                                    <action selector="nextButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="O5o-dI-qpM"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3bb-fT-nCk">
+                            <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3bb-fT-nCk">
                                 <rect key="frame" x="162" y="554" width="50" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="50" id="bCJ-P1-6HT"/>
                                     <constraint firstAttribute="height" constant="50" id="gyG-W6-6SI"/>
                                 </constraints>
                                 <state key="normal" image="play"/>
+                                <connections>
+                                    <action selector="playOrPauseButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2Ie-VS-la7"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -87,6 +99,15 @@
                             <constraint firstItem="urQ-Sp-iIN" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="30" id="vkQ-1h-VkM"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="imageView" destination="qEz-mC-YXL" id="san-up-Qc9"/>
+                        <outlet property="nextSoundButton" destination="fen-J2-jKZ" id="bPH-ie-d1t"/>
+                        <outlet property="playOrPauseButton" destination="3bb-fT-nCk" id="thW-Jr-OfQ"/>
+                        <outlet property="prevSoundButton" destination="ZRm-27-9Es" id="jcr-vS-0fl"/>
+                        <outlet property="sendTimeLabel" destination="urQ-Sp-iIN" id="3X8-iE-rrz"/>
+                        <outlet property="slider" destination="M9J-WY-4rG" id="Gci-Kz-Nzi"/>
+                        <outlet property="stayTimeLabel" destination="UJ6-Lf-8xf" id="PzZ-24-cU5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
