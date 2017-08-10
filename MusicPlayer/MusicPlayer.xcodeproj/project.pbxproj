@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		58C80E871F3C5C13005B6D32 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58C80E861F3C5C13005B6D32 /* AVFoundation.framework */; };
 		58F357111F3C4BB70073870C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 58F357101F3C4BB70073870C /* main.m */; };
 		58F357141F3C4BB70073870C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 58F357131F3C4BB70073870C /* AppDelegate.m */; };
 		58F357171F3C4BB70073870C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 58F357161F3C4BB70073870C /* ViewController.m */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		58C80E861F3C5C13005B6D32 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		58F3570C1F3C4BB70073870C /* MusicPlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MusicPlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		58F357101F3C4BB70073870C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		58F357121F3C4BB70073870C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -33,17 +35,27 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				58C80E871F3C5C13005B6D32 /* AVFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		58C80E851F3C5C12005B6D32 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				58C80E861F3C5C13005B6D32 /* AVFoundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		58F357031F3C4BB70073870C = {
 			isa = PBXGroup;
 			children = (
 				58F3570E1F3C4BB70073870C /* MusicPlayer */,
 				58F3570D1F3C4BB70073870C /* Products */,
+				58C80E851F3C5C12005B6D32 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -309,6 +321,7 @@
 				58F357251F3C4BB70073870C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
