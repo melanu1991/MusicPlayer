@@ -81,6 +81,10 @@ static NSString * const Sounds[CountSounds] = { @"zebrahead_-_call_your_friends.
     [self updateTime];
 }
 
+- (IBAction)rewindSoundUsingTouch:(UISlider *)sender {
+    NSLog(@"touch");
+}
+
 - (IBAction)prevButtonPressed:(UIButton *)sender {
     --self.numberCurrentSound;
     [self correctNumberOfSounds];
