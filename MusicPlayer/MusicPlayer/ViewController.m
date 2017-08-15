@@ -8,8 +8,8 @@ static NSString * const Sounds[CountSounds] = { @"zebrahead_-_call_your_friends.
 @property (strong, nonatomic) AVAudioPlayer *audioPlayer;
 @property (assign, nonatomic) NSInteger numberCurrentSound;
 @property (strong, nonatomic) NSTimer *timer;
-@property (weak, nonatomic) IBOutlet UILabel *sendTimeLabel;
-@property (weak, nonatomic) IBOutlet UILabel *stayTimeLabel;
+@property (weak, nonatomic) IBOutlet UILabel *passedTimeLabel;
+@property (weak, nonatomic) IBOutlet UILabel *stayedTimeLabel;
 @property (weak, nonatomic) IBOutlet UISlider *slider;
 @property (weak, nonatomic) IBOutlet UIButton *prevSoundButton;
 @property (weak, nonatomic) IBOutlet UIButton *playOrPauseButton;
@@ -24,7 +24,7 @@ static NSString * const Sounds[CountSounds] = { @"zebrahead_-_call_your_friends.
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self settingsAudioPlayer];
+    [self setupAudioPlayer];
 }
 
 #pragma mark - helpers
@@ -39,19 +39,19 @@ static NSString * const Sounds[CountSounds] = { @"zebrahead_-_call_your_friends.
 
 - (void)updateTime {
     self.slider.value = self.audioPlayer.currentTime;
-    self.sendTimeLabel.text = [self sendTime];
-    self.stayTimeLabel.text = [self stayTime];
+    self.passedTimeLabel.text = [self passedTime];
+    self.stayedTimeLabel.text = [self stayedTime];
 }
 
-- (void)settingsAudioPlayer {
-    NSString *path = [NSString stringWithFormat:@"%@/%@", [[NSBundle mainBundle] resourcePath], Sounds[self.numberCurrentSound]];
+- (void)setupAudioPlayer {
+    NSString *path = [[NSBundle mainBundle] pathForResource:Sounds[self.numberCurrentSound] ofType:nil];
     NSURL *soundUrl = [NSURL fileURLWithPath:path];
     self.audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:soundUrl error:nil];
     self.audioPlayer.delegate = self;
     self.slider.maximumValue = self.audioPlayer.duration;
 }
 
-- (void)correctNumberOfSounds {
+- (void)setNumberOfSounds {
     if (self.numberCurrentSound < 0) {
         self.numberCurrentSound = CountSounds - 1;
     }
@@ -60,14 +60,14 @@ static NSString * const Sounds[CountSounds] = { @"zebrahead_-_call_your_friends.
     }
 }
 
-- (NSString *)sendTime {
+- (NSString *)passedTime {
     NSInteger sendTime = self.audioPlayer.duration - (self.audioPlayer.duration - self.audioPlayer.currentTime);
     NSInteger sendMinutes = sendTime / 60;
     NSInteger sendSeconds = sendTime - sendMinutes * 60;
     return [NSString stringWithFormat:@"%02ld:%02ld", sendMinutes, sendSeconds];
 }
 
-- (NSString *)stayTime {
+- (NSString *)stayedTime {
     NSInteger stayTime = self.audioPlayer.duration - self.audioPlayer.currentTime;
     NSInteger stayMinutes = stayTime / 60;
     NSInteger staySeconds = stayTime - stayMinutes * 60;
@@ -87,15 +87,15 @@ static NSString * const Sounds[CountSounds] = { @"zebrahead_-_call_your_friends.
 
 - (IBAction)prevButtonPressed:(UIButton *)sender {
     --self.numberCurrentSound;
-    [self correctNumberOfSounds];
-    [self settingsAudioPlayer];
+    [self setNumberOfSounds];
+    [self setupAudioPlayer];
     [self.audioPlayer play];
 }
 
 - (IBAction)nextButtonPressed:(UIButton *)sender {
     self.numberCurrentSound++;
-    [self correctNumberOfSounds];
-    [self settingsAudioPlayer];
+    [self setNumberOfSounds];
+    [self setupAudioPlayer];
     [self.audioPlayer play];
 }
 

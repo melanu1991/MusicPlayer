@@ -110,11 +110,11 @@
                     <connections>
                         <outlet property="imageView" destination="qEz-mC-YXL" id="san-up-Qc9"/>
                         <outlet property="nextSoundButton" destination="fen-J2-jKZ" id="bPH-ie-d1t"/>
+                        <outlet property="passedTimeLabel" destination="urQ-Sp-iIN" id="n3q-HA-7PQ"/>
                         <outlet property="playOrPauseButton" destination="3bb-fT-nCk" id="thW-Jr-OfQ"/>
                         <outlet property="prevSoundButton" destination="ZRm-27-9Es" id="jcr-vS-0fl"/>
-                        <outlet property="sendTimeLabel" destination="urQ-Sp-iIN" id="3X8-iE-rrz"/>
                         <outlet property="slider" destination="M9J-WY-4rG" id="Gci-Kz-Nzi"/>
-                        <outlet property="stayTimeLabel" destination="UJ6-Lf-8xf" id="PzZ-24-cU5"/>
+                        <outlet property="stayedTimeLabel" destination="UJ6-Lf-8xf" id="9jJ-5T-dEy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
