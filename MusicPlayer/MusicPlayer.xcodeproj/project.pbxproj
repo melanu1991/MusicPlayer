@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		58C80E871F3C5C13005B6D32 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58C80E861F3C5C13005B6D32 /* AVFoundation.framework */; };
+		58C80E8E1F3C66F9005B6D32 /* zebrahead_-_call_your_friends.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 58C80E8A1F3C66F9005B6D32 /* zebrahead_-_call_your_friends.mp3 */; };
+		58C80E8F1F3C66F9005B6D32 /* zebrahead_-_headrush.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 58C80E8B1F3C66F9005B6D32 /* zebrahead_-_headrush.mp3 */; };
+		58C80E901F3C66F9005B6D32 /* zebrahead_-_hell_yeah.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 58C80E8C1F3C66F9005B6D32 /* zebrahead_-_hell_yeah.mp3 */; };
+		58C80E911F3C66F9005B6D32 /* zebrahead-girlfriend.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 58C80E8D1F3C66F9005B6D32 /* zebrahead-girlfriend.mp3 */; };
 		58F357111F3C4BB70073870C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 58F357101F3C4BB70073870C /* main.m */; };
 		58F357141F3C4BB70073870C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 58F357131F3C4BB70073870C /* AppDelegate.m */; };
 		58F357171F3C4BB70073870C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 58F357161F3C4BB70073870C /* ViewController.m */; };
@@ -16,6 +21,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		58C80E861F3C5C13005B6D32 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		58C80E8A1F3C66F9005B6D32 /* zebrahead_-_call_your_friends.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "zebrahead_-_call_your_friends.mp3"; sourceTree = "<group>"; };
+		58C80E8B1F3C66F9005B6D32 /* zebrahead_-_headrush.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "zebrahead_-_headrush.mp3"; sourceTree = "<group>"; };
+		58C80E8C1F3C66F9005B6D32 /* zebrahead_-_hell_yeah.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "zebrahead_-_hell_yeah.mp3"; sourceTree = "<group>"; };
+		58C80E8D1F3C66F9005B6D32 /* zebrahead-girlfriend.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "zebrahead-girlfriend.mp3"; sourceTree = "<group>"; };
 		58F3570C1F3C4BB70073870C /* MusicPlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MusicPlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		58F357101F3C4BB70073870C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		58F357121F3C4BB70073870C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -33,17 +43,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				58C80E871F3C5C13005B6D32 /* AVFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		58C80E851F3C5C12005B6D32 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				58C80E861F3C5C13005B6D32 /* AVFoundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		58C80E881F3C6688005B6D32 /* sounds */ = {
+			isa = PBXGroup;
+			children = (
+				58C80E8A1F3C66F9005B6D32 /* zebrahead_-_call_your_friends.mp3 */,
+				58C80E8B1F3C66F9005B6D32 /* zebrahead_-_headrush.mp3 */,
+				58C80E8C1F3C66F9005B6D32 /* zebrahead_-_hell_yeah.mp3 */,
+				58C80E8D1F3C66F9005B6D32 /* zebrahead-girlfriend.mp3 */,
+			);
+			path = sounds;
+			sourceTree = "<group>";
+		};
 		58F357031F3C4BB70073870C = {
 			isa = PBXGroup;
 			children = (
 				58F3570E1F3C4BB70073870C /* MusicPlayer */,
 				58F3570D1F3C4BB70073870C /* Products */,
+				58C80E851F3C5C12005B6D32 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -66,6 +97,7 @@
 				58F3571B1F3C4BB70073870C /* Assets.xcassets */,
 				58F3571D1F3C4BB70073870C /* LaunchScreen.storyboard */,
 				58F357201F3C4BB70073870C /* Info.plist */,
+				58C80E881F3C6688005B6D32 /* sounds */,
 				58F3570F1F3C4BB70073870C /* Supporting Files */,
 			);
 			path = MusicPlayer;
@@ -137,7 +169,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				58C80E8E1F3C66F9005B6D32 /* zebrahead_-_call_your_friends.mp3 in Resources */,
+				58C80E901F3C66F9005B6D32 /* zebrahead_-_hell_yeah.mp3 in Resources */,
+				58C80E911F3C66F9005B6D32 /* zebrahead-girlfriend.mp3 in Resources */,
 				58F3571F1F3C4BB70073870C /* LaunchScreen.storyboard in Resources */,
+				58C80E8F1F3C66F9005B6D32 /* zebrahead_-_headrush.mp3 in Resources */,
 				58F3571C1F3C4BB70073870C /* Assets.xcassets in Resources */,
 				58F3571A1F3C4BB70073870C /* Main.storyboard in Resources */,
 			);
@@ -309,6 +345,7 @@
 				58F357251F3C4BB70073870C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
